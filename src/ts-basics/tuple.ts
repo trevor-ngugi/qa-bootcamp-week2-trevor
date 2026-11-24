@@ -1,3 +1,3 @@
-let user:[number,string]=[1,"trevor"];
-user.push(1);
-console.log(user[0]);
+let userr:[number,string]=[1,"trevor"];
+userr.push(1);
+console.log(userr[0]);
