@@ -6,7 +6,7 @@ test('create cart', async ({ request }) => {
     {
         data:{
             "product_id": "01HHJC7RERZ0M3VDGS6X9HM33A",
-            "quantity": 14
+            "quantity": 15
         }
     }
   )
@@ -38,7 +38,7 @@ test('non existence cart id', async ({ request }) => {
   console.log('Status:', response.status());
   console.log('Response:', await response.text());
 
-  expect(response.status()).toBe(403);
+  expect(response.status()).toBe(404);
   
   
   
