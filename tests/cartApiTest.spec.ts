@@ -21,7 +21,7 @@ test('create cart', async ({ request }) => {
   expect(responseData).toHaveProperty('id');
   const cartId=responseData.id;
   const deleteResponse = await request.delete(`https://api.practicesoftwaretesting.com/carts/${cartId}`);
-  expect(deleteResponse.status()).toBe(200);
+  expect(deleteResponse.status()).toBe(204);
   
   //const responseObject=await response.json()
   //console.log(responseObject)
@@ -29,4 +29,18 @@ test('create cart', async ({ request }) => {
   //expect(response.status()).toBe(200)
   //data field should have an ID
   //expect(responseObject.data).toHaveId
+});
+
+test('non existence cart id', async ({ request }) => {
+
+  const response= await request.get('https://api.practicesoftwaretesting.com/carts/1234')
+
+  console.log('Status:', response.status());
+  console.log('Response:', await response.text());
+
+  expect(response.status()).toBe(403);
+  
+  
+  
+  
 });
