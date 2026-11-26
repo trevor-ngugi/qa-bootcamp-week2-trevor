@@ -1,6 +1,6 @@
 import {Page,Locator} from '@playwright/test'
 
-export class searchProduct{
+export class SearchProduct{
 
     readonly page:Page;
     readonly search:Locator;
@@ -8,8 +8,8 @@ export class searchProduct{
 
     constructor(page:Page){
         this.page=page;
-        this.search=page.locator('search-query');
-        this.searchButton=page.locator('search-submit');
+        this.search=page.locator('[data-test="search-query"]');
+        this.searchButton=page.locator('[data-test="search-submit"]');
         
 
     }
