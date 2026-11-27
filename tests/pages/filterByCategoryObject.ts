@@ -17,7 +17,7 @@ export class FilterByCategory{
 
     constructor(page:Page){
         this.page=page;
-        this.handtoolsCheckbox=page.locator('[data-test="category-01M8EE1PNKYFSQMBA4RH8675RA"]');
+        this.handtoolsCheckbox=page.getByRole('checkbox', {name: 'Hand Tools',});
         
         this.hammerCheckbox=page.locator(       '[data-test="category-01M8EE1PP2ZJA613DX3Z887AR2"]'); 
         this.handsawCheckbox=page.locator(      '[data-test="category-01M8EE1PP2ZJA613DX3Z887AR3"]');
