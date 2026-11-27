@@ -15,7 +15,7 @@ test('search pliers', async ({ page }) => {
   await page.locator('[data-test="search-query"]').fill('pliers');
   await page.locator('[data-test="search-submit"]').click();
   await page.getByTestId('search-result-count').click();
-  await page.locator('[data-test="product-01M892CEB39H8E6A17C9MN56QB"]').click();
+  await page.locator('[data-test="product-01M8BZ2QZQ03XYG44P4DTMKKTS"]').click();
   await page.getByRole('img', { name: 'Pliers', exact: true }).click();
   
 });
